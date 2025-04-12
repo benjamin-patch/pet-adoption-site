@@ -13,3 +13,8 @@ def index():
     <li>Rabbits</li>
   </ul>
   '''
+
+@app.route('/animals/<pet_type>')
+def animals(pet_type):
+  html = f'<h1>List of {pet_type}</h1>'
+  return html
