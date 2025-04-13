@@ -18,4 +18,9 @@ def index():
 @app.route('/animals/<pet_type>')
 def animals(pet_type):
   html = f'<h1>List of {pet_type}</h1>'
+  html += '<ul>'
+  for pet in pets[pet_type]:
+    pet = f'<li>{pet['name']}</li>'
+    html += pet
+  html += '</ul>'
   return html
