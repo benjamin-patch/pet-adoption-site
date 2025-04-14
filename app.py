@@ -24,3 +24,8 @@ def animals(pet_type):
     html += pet
   html += '</ul>'
   return html
+
+@app.route('/animals/<pet_type>/<int:pet_id>')
+def pet(pet_type, pet_id):
+  pet = pets[pet_type][pet_id]
+  return pet
