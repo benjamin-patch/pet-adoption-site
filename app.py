@@ -28,5 +28,8 @@ def animals(pet_type):
 @app.route('/animals/<pet_type>/<int:pet_id>')
 def pet(pet_type, pet_id):
   pet = pets[pet_type][pet_id]
-  html = f'<h1>{pet["name"]}</h1>'
+  html = f'''
+  <h1>{pet["name"]}</h1>
+  <img src="{pet["url"]}" />
+  '''
   return html
