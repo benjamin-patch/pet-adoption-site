@@ -31,5 +31,10 @@ def pet(pet_type, pet_id):
   html = f'''
   <h1>{pet["name"]}</h1>
   <img src="{pet["url"]}" />
+  <p>{pet["description"]}</p>
+  <ul>
+    <li>Breed: {pet["breed"]}</li>
+    <li>Age: {pet["age"]}</li>
+  </ul>
   '''
   return html
