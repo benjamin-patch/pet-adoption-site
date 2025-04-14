@@ -20,7 +20,7 @@ def animals(pet_type):
   html = f'<h1>List of {pet_type}</h1>'
   html += '<ul>'
   for pet in pets[pet_type]:
-    pet = f'<li>{pet['name']}</li>'
+    pet = f'<li>{pet["name"]}</li>'
     html += pet
   html += '</ul>'
   return html
@@ -28,4 +28,5 @@ def animals(pet_type):
 @app.route('/animals/<pet_type>/<int:pet_id>')
 def pet(pet_type, pet_id):
   pet = pets[pet_type][pet_id]
-  return pet
+  html = f'<h1>{pet["name"]}</h1>'
+  return html
